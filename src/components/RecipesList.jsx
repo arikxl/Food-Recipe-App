@@ -1,16 +1,16 @@
 import React from 'react';
 
-import RecipeItem from './RecipeItem';
+import RecipePreview from './RecipePreview';
 
-const RecipesList = ({recipes}) => {
+const RecipesList = ({ recipes }) => {
 
     return (
         <div className="recipes">
-            {recipes.length && recipes.map((recipe, index) =>
-                <RecipeItem recipe={recipe} key={index}/>
+            {recipes && recipes.map((recipe, index) =>
+                <RecipePreview recipe={recipe} key={index} />
             )}
         </div>
-    )
-}
+    );
+};
 
 export default RecipesList;
